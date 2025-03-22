@@ -73,7 +73,8 @@ go_analysis <-
            de_results,
            go_assignments,
            logFC_cutoff = 0,
-           go_p.val = 0.05) {
+           go_p.val = 0.05,
+           pwf_plot = FALSE) {
     
     #Verify inputs are correct types
     if (class(de_results)[1] != "TopTags") {
@@ -130,7 +131,8 @@ go_analysis <-
       nullp(genes_for_annotation,
             "Bradysia coprophila",
             "knownGene",
-            txs_length)
+            txs_length,
+            pwf_plot)
     go_results <-
       goseq(calculated_pwf,
             "Bradysia coprophila",
