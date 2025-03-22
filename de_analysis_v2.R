@@ -1,9 +1,13 @@
 library(edgeR)
-library(tidyverse)
+library(stringr)
+library(DBI)
 library(readr)
 library(tibble)
 library(goseq)
 library(AnnotationDbi)
+
+#Load feature_counts data
+feature_counts <- readRDS("feature_counts.RData")
 
 #Early M&F vs Late M&F
 el_sample_types <- c(rep("E", 3), rep("L", 3), rep("E", 3), rep("L", 3))
