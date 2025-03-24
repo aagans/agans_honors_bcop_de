@@ -7,7 +7,7 @@ de_analysis <-
            summary = FALSE) {
     #Detect what data type is provided
     if (class(data)[1] == "DGEList") {
-      bcop_dgelist <- dgelist
+      bcop_dgelist <- data
     } else if (class(data) == "list" &
                all(names(data) == c("counts", "annotation", "targets", "stat"))) {
       bcop_dgelist <- featureCounts2DGEList(data)
