@@ -25,3 +25,6 @@ emef_de_results <- de_analysis(early_bcop_dgelist, emef_sample_types)
 emef_de_results_tbl <- de_analysis(early_bcop_dgelist, emef_sample_types, export = TRUE)
 
 emef_go_results <- go_analysis(bcop_txdb, emef_de_results, go_assign_vec, 2)
+
+emef_de_results_tbl <- de_analysis(early_bcop_dgelist, emef_sample_types, export = TRUE)
+
