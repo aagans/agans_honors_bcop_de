@@ -20,5 +20,5 @@ entrez_alias_tbl <- inner_join(bcop_alias, bcop_entrez) |>
 go_assign_vec <- entrez_go_tbl$GOALL
 names(go_assign_vec) <- row.names(entrez_go_tbl)
 
-named_emef_de_results_tbl <- left_join(emef_de_results_tbl, 
+named_emef_de_results_tbl <- left_join(emef_res_fil, 
                                        entrez_alias_tbl, by = join_by("gene_id" == ENTREZID))
